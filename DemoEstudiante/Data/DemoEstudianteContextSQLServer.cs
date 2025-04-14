@@ -13,4 +13,8 @@ using DemoEstudiante.Models;
         }
 
         public DbSet<DemoEstudiante.Models.Estudiante> Estudiante { get; set; } = default!;
+
+public DbSet<DemoEstudiante.Models.Carrera> Carrera { get; set; } = default!;
+
+public DbSet<DemoEstudiante.Models.Facultad> Facultad { get; set; } = default!;
     }

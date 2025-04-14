@@ -15,7 +15,7 @@ namespace DemoEstudiante.Models
         [MaxLength(50)]
         public string Apellido { get; set; }
 
-        public DateOnly FechaNacimiento { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         [AllowNull]
         public Boolean TieneBeca { get; set; }
         public int CarreraId { get; set; }

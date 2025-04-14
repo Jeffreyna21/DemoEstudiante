@@ -7,7 +7,7 @@ namespace DemoEstudiante.Models
     {
         [Key]
         public int Id { get; set; }
-        [MaxLength]
+        [MaxLength(100)]
         public string Nombre { get; set; }
         public int FacultadId { get; set; }
         [ForeignKey("FacultadId")]
