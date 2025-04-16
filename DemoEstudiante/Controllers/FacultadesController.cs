@@ -21,7 +21,10 @@ namespace DemoEstudiante.Controllers
         // GET: Facultads
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Facultad.ToListAsync());
+            var ListaFacultades = await _context.Facultad.ToListAsync();
+            ListaFacultades = ListaFacultades.FindAll(item => item.Nombre == "FICA");
+
+            return View(ListaFacultades);
         }
 
         // GET: Facultads/Details/5
@@ -72,7 +75,7 @@ namespace DemoEstudiante.Controllers
                 return NotFound();
             }
 
-            var facultad = await _context.Facultad.FindAsync(id);
+            var facultad = await _context.Facultad.FirstOrDefaultAsync(item=> item.Id==id);
             if (facultad == null)
             {
                 return NotFound();
