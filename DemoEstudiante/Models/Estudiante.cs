@@ -20,7 +20,7 @@ namespace DemoEstudiante.Models
         public Boolean TieneBeca { get; set; }
         public int CarreraId { get; set; }
         [ForeignKey("CarreraId")]
-        public Carrera Carrera { get; set; }
+        public Carrera? Carrera { get; set; }
 
     }
 }

@@ -11,6 +11,6 @@ namespace DemoEstudiante.Models
         public string Nombre { get; set; }
         public int FacultadId { get; set; }
         [ForeignKey("FacultadId")]
-        public Facultad Facultad { get; set; }
+        public Facultad? Facultad { get; set; }
     }
 }
