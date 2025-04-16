@@ -41,7 +41,7 @@ namespace DemoEstudiante.Migrations
                         column: x => x.FacultadId,
                         principalTable: "Facultad",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restricted);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -64,7 +64,7 @@ namespace DemoEstudiante.Migrations
                         column: x => x.CarreraId,
                         principalTable: "Carrera",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restricted);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
